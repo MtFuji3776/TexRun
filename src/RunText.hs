@@ -80,6 +80,7 @@ mkTexHandles dir env command args preamble = do
     return (outStream,inStream,h)
 
 -- これはわざわざ再実装せずとも、本家のrunInteractiveProcess'の戻り値にdecodeUtf8を適用すれば良さそう
+    -- と思ったら本家はそれをexportしてなかった
     -- io-streamsを見る限り、入出力はどうしてもByteStringにせざるを得ないようだが、UTF-8とのエンコーダ/デコーダが提供されているようだ
     -- 入出力の出入り口のところでエンコーダ/デコーダを噛ませて、あとはパーサーをUTF8からByteStringに変換したものを用意すれば、うまく動くんじゃないだろうか？
 runInteractiveProcess'_ :: FilePath -> [String] -> Maybe FilePath -> Maybe [(String,String)]
