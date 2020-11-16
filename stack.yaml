@@ -40,6 +40,8 @@ packages:
 #   commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a
 #
 # extra-deps: []
+extra-deps: 
+- texrunner-0.0.1.2@sha256:b8486e539db92bf1442c2f0dcc8ee60b5848628601b960b1fca93ff1d1ed687f,1881
 
 # Override default flag values for local packages and extra-deps
 # flags: {}
